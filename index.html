@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Kebijakan Garansi • FStore Official</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f7fa;
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 20px 16px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 880px;
+            width: 100%;
+            margin: 0 auto;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 15px 40px -12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* header bersih */
+        .header {
+            padding: 32px 32px 20px;
+            text-align: center;
+            background: white;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+
+        .header .sub {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .store-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f1f4f9;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #1e3a5f;
+            margin-bottom: 16px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .store-brand i {
+            color: #2563eb;
+            font-size: 1.3rem;
+        }
+
+        .date-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f8fafc;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #475569;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* konten utama */
+        .content {
+            padding: 32px 32px 24px;
+        }
+
+        /* setiap bagian */
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-title .icon {
+            width: 44px;
+            height: 44px;
+            background: #eef2ff;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            font-size: 1.4rem;
+        }
+
+        .section-title h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        /* list items */
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 12px 0;
+        }
+
+        .list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-size: 0.98rem;
+            color: #334155;
+        }
+
+        .list li i {
+            width: 20px;
+            margin-top: 2px;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .list-check i { color: #10b981; }      /* hijau */
+        .list-times i { color: #ef4444; }       /* merah */
+        .list-warning i { color: #f59e0b; }     /* kuning */
+
+        .list li strong {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        /* kotak prosedur */
+        .procedure-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 20px 24px;
+            margin: 16px 0 4px;
+            border: 1px solid #e9edf2;
+        }
+
+        .procedure-card p {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 14px;
+            font-size: 1rem;
+        }
+
+        .procedure-card p i {
+            margin-right: 8px;
+            color: #f59e0b;
+        }
+
+        .procedure-card ol {
+            padding-left: 22px;
+            margin: 0;
+        }
+
+        .procedure-card li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        /* note */
+        .note {
+            background: #fffbeb;
+            border-left: 5px solid #f59e0b;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin: 18px 0 8px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-size: 0.95rem;
+        }
+
+        .note i {
+            color: #f59e0b;
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        .note-success {
+            background: #ecfdf5;
+            border-left-color: #10b981;
+        }
+
+        .note-success i {
+            color: #10b981;
+        }
+
+        /* footer */
+        .footer {
+            background: #f9fbfd;
+            padding: 28px 32px 32px;
+            text-align: center;
+            border-top: 1px solid #eef2f6;
+        }
+
+        .footer p {
+            color: #475569;
+            margin-bottom: 16px;
+            font-size: 0.98rem;
+        }
+
+        .wa-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 14px 36px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            box-shadow: 0 10px 20px -5px rgba(37, 211, 102, 0.3);
+            transition: 0.2s;
+            border: none;
+            margin-bottom: 18px;
+        }
+
+        .wa-button:hover {
+            background: #20bd5a;
+            transform: scale(1.02);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        /* responsive */
+        @media (max-width: 600px) {
+            body { padding: 12px 10px; }
+            .header { padding: 24px 20px 16px; }
+            .header h1 { font-size: 1.7rem; }
+            .store-brand { font-size: 1rem; padding: 6px 16px; }
+            .content { padding: 24px 20px; }
+            .section-title .icon { width: 38px; height: 38px; font-size: 1.2rem; }
+            .section-title h2 { font-size: 1.25rem; }
+            .list li { font-size: 0.92rem; gap: 10px; }
+            .procedure-card { padding: 16px 18px; }
+            .footer { padding: 24px 20px; }
+            .wa-button { padding: 12px 28px; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🔒 Kebijakan Garansi</h1>
+            <div class="sub">Untuk akun Twitter, Instagram & media sosial</div>
+            <div class="store-brand">
+                <i class="fas fa-store-alt"></i> FStore Official
+            </div>
+            <div class="date-chip">
+                <i class="far fa-calendar-alt"></i> Berlaku mulai 16 Februari 2026
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <!-- A. Masa & Cakupan -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon"><i class="fas fa-clock"></i></span>
+                    <h2>A. Masa & Cakupan Garansi</h2>
+                </div>
+                <ul class="list list-check">
+                    <li><i class="fas fa-check-circle"></i> <strong>Garansi 1×24 jam</strong> — hanya untuk login pertama setelah akun dikirim.</li>
+                    <li><i class="fas fa-check-circle"></i> Akun tidak bisa login karena data salah (username/email/password).</li>
+                    <li><i class="fas fa-check-circle"></i> Akun terkunci (<em>locked</em>) saat pertama kali diakses.</li>
+                    <li><i class="fas fa-check-circle"></i> Muncul 2FA tanpa kode cadangan dari penjual.</li>
+                </ul>
+                <div class="note">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Garansi hanya untuk masalah teknis akun saat pertama diterima, bukan akibat pemakaian setelahnya.</span>
+                </div>
+            </div>
+
+            <!-- B. Prosedur Klaim -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon"><i class="fas fa-clipboard-list"></i></span>
+                    <h2>B. Prosedur Klaim</h2>
+                </div>
+                <div class="procedure-card">
+                    <p><i class="fas fa-exclamation-triangle"></i> Syarat wajib agar klaim diproses:</p>
+                    <ol>
+                        <li>Lapor via chat <strong>maksimal 1×24 jam</strong> sejak masalah ditemukan.</li>
+                        <li>Sertakan <strong>video screen recording</strong> (dari login hingga error).</li>
+                        <li>Tidak boleh mengubah data apapun (email, no HP, 2FA) sebelum melapor.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- C. Pengecualian -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon"><i class="fas fa-ban"></i></span>
+                    <h2>C. Pengecualian Garansi</h2>
+                </div>
+                <ul class="list list-times">
+                    <li><i class="fas fa-times-circle"></i> <strong>Pelanggaran kebijakan platform:</strong> spam, ujaran kebencian, konten ilegal.</li>
+                    <li><i class="fas fa-times-circle"></i> Perubahan data setelah akun diterima (ganti email, pasang 2FA, dll).</li>
+                    <li><i class="fas fa-times-circle"></i> Kelalaian pribadi (lupa password).</li>
+                    <li><i class="fas fa-times-circle"></i> Menghubungkan ke aplikasi pihak ketiga yang tidak aman.</li>
+                    <li><i class="fas fa-times-circle"></i> <strong>Force majeure</strong> — error massal dari pihak Twitter/Instagram.</li>
+                    <li><i class="fas fa-times-circle"></i> Tidak mengikuti prosedur klaim.</li>
+                </ul>
+            </div>
+
+            <!-- D. Sanksi -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon"><i class="fas fa-gavel"></i></span>
+                    <h2>D. Sanksi & Konsekuensi</h2>
+                </div>
+                <ul class="list list-warning">
+                    <li><i class="fas fa-exclamation-circle"></i> Klaim palsu / rekayasa bukti = <strong>blokir permanen & blacklist</strong>.</li>
+                    <li><i class="fas fa-exclamation-circle"></i> Pembeli kooperatif akan dibantu perbaikan/penggantian akun.</li>
+                </ul>
+                <div class="note note-success">
+                    <i class="fas fa-handshake"></i>
+                    <span>Dengan transaksi, Anda menyetujui semua kebijakan di atas.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER + WA -->
+        <div class="footer">
+            <p>📲 Butuh bantuan? Klaim garansi langsung via WhatsApp</p>
+            <a href="https://wa.me/6285133334542?text=Hallo%20admin%20FStore%2C%20saya%20ingin%20claim%20garansi" target="_blank" class="wa-button">
+                <i class="fab fa-whatsapp"></i> +62 851-3333-4542
+            </a>
+            <div class="copyright">
+                <i class="far fa-copyright"></i> 2026 FStore Official. Hak dilindungi.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
